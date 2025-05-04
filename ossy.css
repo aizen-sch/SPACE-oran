@@ -1,0 +1,162 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body{
+    background: linear-gradient(#018f8fc0,#002c66);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.26);
+    position: absolute;
+    z-index: -1;
+    clip-path: circle(40% at right 70%);
+}
+.container{
+    width: 80%;
+height: 80%;
+background: rgba(255,255,255,0.1);
+border-radius: 20px;
+overflow: hidden;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+nav .logo{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 9px;
+    font-weight: 700;
+}
+nav ul li {
+    display: inline-block;
+    margin: 0 6px;
+}
+nav ul li a{
+    color: #f3f3f3;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+nav ul li a:hover{
+    color: rgb(0, 153, 255);
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+}
+.content .text{
+    color: #000000;
+    width: 70%;
+}
+.content .text h2{
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 120;
+    letter-spacing: 2px;
+}
+.content .text p{
+    font-size: 16px;
+    line-height: 25px;
+    margin: 25px 0;
+    letter-spacing: 1px;
+}
+.container .image{
+    width: 40%;
+}
+.content .image .PHOTO{
+    width: 400px;
+}
+
+@media (min-width:950px) and (max-width:1150px){
+    .content .image .PHOTO{
+        width: 330px;
+    }
+}
+@media (max-width:950px){
+    .content, nav{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .container .image .content .text{
+        width: 80%;
+    } 
+    body::after{
+        clip-path: circle(50% at bottom);
+    }
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+  }
+  
+  .solar-system {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: rotate-orbit 20s linear infinite;
+  }
+  
+  .orbit {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+  }
+  
+  .planet {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.5);
+  }
+  
+  .uranus {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(45deg, #65c7f7, #0052d4);
+    box-shadow: 0 0 20px rgba(101, 199, 247, 0.5);
+    animation: rotate-planet 10s linear infinite;
+  }
+  
+  @keyframes rotate-orbit {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
